@@ -8,6 +8,8 @@
 <meta name="keywords" content="Kate English, 케이트잉글리쉬, 1:1 영어회화, 화상영어, 성인영어회화, 직장인영어회화, 의정부 영어회화">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://kateenglish.onrender.com/">
+<link rel="canonical" href="https://kateenglish.onrender.com/">
 <meta property="og:title" content="Kate English | 1:1 영어회화 · 대면 · 화상 수업">
 <meta property="og:description" content="목적과 실력에 맞춘 1:1 영어회화. 무료 상담과 레벨 진단을 신청해 보세요.">
 <meta property="og:locale" content="ko_KR">
@@ -61,6 +63,7 @@ a{color:inherit}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;
   font:inherit;font-weight:700;text-decoration:none;border-radius:14px;padding:12px 20px}
 .btn-sun{background:var(--primary);color:var(--onPrimary)}
+.btn-talk{background:#F6E5E1;color:#1F3A55;border:2px solid #F6E5E1}
 .btn-line{background:transparent;color:var(--text);border:2px solid var(--gold)}
 .btn:focus-visible,.nav a:focus-visible,.faq summary:focus-visible{outline:3px solid var(--sea);outline-offset:3px}
 @media (max-width:720px){.nav{display:none}.top .btn{padding:9px 14px;font-size:14px}}
@@ -180,6 +183,33 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;text-align:center}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#1F3A55;color:#fff;
   padding:12px 20px;border-radius:12px;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s}
 .toast.show{opacity:1}
+
+/* floating quick menu */
+.quick{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:8px;
+  background:var(--card);border:1px solid var(--line);border-radius:22px;padding:10px 8px;box-shadow:0 8px 28px rgba(31,58,85,.12)}
+.quick a{display:flex;flex-direction:column;align-items:center;gap:3px;width:68px;padding:10px 4px 8px;border-radius:16px;
+  text-decoration:none;color:var(--text);font-size:12px;font-weight:700;line-height:1.2;text-align:center}
+.quick a:hover{background:var(--bg)}
+.quick a:focus-visible{outline:3px solid var(--sea);outline-offset:2px}
+.quick a.q-main{background:#1F3A55;color:#FEF9F9}
+.quick a.q-main:hover{background:#294A6B}
+.quick a.q-talk{background:#F6E5E1;color:#1F3A55}
+.quick svg{width:22px;height:22px;flex:none}
+.quick hr{width:40px;border:0;border-top:1px solid var(--line);margin:2px auto}
+.mbar{display:none}
+@media (max-width:1180px){
+  .quick{display:none}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:8px;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--card);border-top:1px solid var(--line);
+    box-shadow:0 -6px 20px rgba(31,58,85,.08)}
+  .mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;height:50px;border-radius:14px;
+    font-weight:700;font-size:15.5px;text-decoration:none}
+  .mbar a svg{width:20px;height:20px}
+  .mbar .m-talk{background:#F6E5E1;color:#1F3A55;flex:0 0 38%}
+  .mbar .m-main{background:#1F3A55;color:#FEF9F9}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .toast{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+}
 </style>
 </head>
 <body>
@@ -206,6 +236,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;text-align:center}
     <p class="lead">의지가 부족해서가 아니라, 나에게 맞지 않는 방법이었을 뿐이에요. 교재 진도 대신 여러분의 목적과 실력에 맞춰 수업을 설계합니다. 만나서 하는 수업도, 집에서 하는 화상 수업도 모두 1:1이에요.</p>
     <div class="hero-actions">
       <a class="btn btn-sun" href="#" data-link="form">무료 상담 신청하기</a>
+      <a class="btn btn-talk" href="#" data-link="kakao">카톡으로 문의하기</a>
       <a class="btn btn-line" href="#system">수업 시스템 보기</a>
     </div>
   </section>
@@ -312,7 +343,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;text-align:center}
       <details><summary>정말 왕초보도 수업이 가능한가요?</summary><p>네. 1:1 수업이라 처음부터 내 속도에 맞춰 진행해요. 왕초보일수록 1:1이 효과가 커요.</p></details>
       <details><summary>대면 수업은 어디에서 하나요?</summary><p>상담 때 가능한 지역과 장소를 함께 정해요. 거리가 멀다면 화상 수업을 추천드려요.</p></details>
       <details><summary>화상 수업은 무엇으로 하나요?</summary><p>줌(Zoom) 등 휴대폰이나 노트북으로 바로 접속할 수 있는 방법으로 진행해요. 처음 접속도 안내해 드려요.</p></details>
-      <details><summary>수업료는 얼마인가요?</summary><p>주 몇 회, 수업 방식에 따라 달라져요. 상담 신청서를 작성해 주시면 맞춤으로 안내해 드려요.</p></details>
+      <details><summary>수업료는 얼마인가요?</summary><p>주 몇 회, 수업 방식에 따라 달라져요. 상담 신청서를 작성해 주시거나 카톡 오픈채팅으로 편하게 물어봐 주세요.</p></details>
       <details><summary>상담을 받으면 꼭 수업을 해야 하나요?</summary><p>아니요. 상담과 레벨 진단만 받아 보셔도 괜찮아요.</p></details>
     </div>
   </section>
@@ -323,6 +354,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;text-align:center}
     <p>신청서를 작성해 주시면 1~2일 안에 연락드릴게요.</p>
     <div class="row">
       <a class="btn btn-ink" href="#" data-link="form">무료 상담 신청하기</a>
+      <a class="btn btn-white" href="#" data-link="kakao">카톡 오픈채팅 문의</a>
       <a class="btn btn-white" href="#" data-link="blog">블로그 보러 가기</a>
       <a class="btn btn-white" href="#" data-link="place">네이버 플레이스</a>
     </div>
@@ -331,6 +363,18 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;text-align:center}
 </main>
 
 <footer><span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;letter-spacing:2px">KATE ENGLISH</span><br>English with Confidence · 1:1 대면 / 화상 수업</footer>
+<nav class="quick" aria-label="빠른 메뉴">
+  <a class="q-main" href="#" data-link="form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/></svg>상담 신청</a>
+  <a class="q-talk" href="#" data-link="kakao"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c-5 0-9 3.1-9 7 0 2.5 1.6 4.6 4 5.9L6 21l4.3-2.6c.6.1 1.1.1 1.7.1 5 0 9-3.1 9-7s-4-7-9-7z"/></svg>카톡 문의</a>
+  <a href="#" data-link="blog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"/></svg>블로그</a>
+  <a href="#" data-link="place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>플레이스</a>
+  <hr>
+  <a href="#top-of-page" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>맨 위로</a>
+</nav>
+<div class="mbar">
+  <a class="m-talk" href="#" data-link="kakao"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c-5 0-9 3.1-9 7 0 2.5 1.6 4.6 4 5.9L6 21l4.3-2.6c.6.1 1.1.1 1.7.1 5 0 9-3.1 9-7s-4-7-9-7z"/></svg>카톡 문의</a>
+  <a class="m-main" href="#" data-link="form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/></svg>무료 상담 신청</a>
+</div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -338,7 +382,8 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;text-align:center}
 var LINKS = {
   form:  "https://forms.gle/HHfGTbUMdN8wAWRc7",   // 구글 설문지 링크
   blog:  "https://blog.naver.com/sjecute",   // 네이버 블로그 주소
-  place: "https://naver.me/5hoaqr0V"    // 네이버 스마트플레이스 주소
+  place: "https://naver.me/5hoaqr0V",
+  kakao: "https://open.kakao.com/o/sVaj7Kri"   // 카카오톡 오픈채팅    // 네이버 스마트플레이스 주소
 };
 (function(){
   var toast=document.getElementById('toast'), t;
