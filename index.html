@@ -254,6 +254,21 @@ section h2::before{content:"N\00BA  " counter(sec,upper-roman);width:auto;height
 .cta h2::before{content:none}
 footer .orn{display:block;width:110px;height:14px;margin:0 auto 12px;background:var(--gold);opacity:.55;
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 20'%3E%3Cpath d='M2 10h56M102 10h56' stroke='%23000' stroke-width='1'/%3E%3Ccircle cx='62' cy='10' r='1.8'/%3E%3Ccircle cx='98' cy='10' r='1.8'/%3E%3Cpath d='M80 2.5c3.2 3 3.2 12 0 15c-3.2-3-3.2-12 0-15z'/%3E%3Cpath d='M80 10c-5-5.5-12-5.5-15 0c3 5.5 10 5.5 15 0zM80 10c5-5.5 12-5.5 15 0c-3 5.5-10 5.5-15 0z' fill='none' stroke='%23000' stroke-width='1.2'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 20'%3E%3Cpath d='M2 10h56M102 10h56' stroke='%23000' stroke-width='1'/%3E%3Ccircle cx='62' cy='10' r='1.8'/%3E%3Ccircle cx='98' cy='10' r='1.8'/%3E%3Cpath d='M80 2.5c3.2 3 3.2 12 0 15c-3.2-3-3.2-12 0-15z'/%3E%3Cpath d='M80 10c-5-5.5-12-5.5-15 0c3 5.5 10 5.5 15 0zM80 10c5-5.5 12-5.5 15 0c-3 5.5-10 5.5-15 0z' fill='none' stroke='%23000' stroke-width='1.2'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* ===== philosophy manifesto ===== */
+main > section.manifesto{counter-increment:none;text-align:center}
+section.manifesto h2::before{content:"Our Philosophy";margin:0 auto 6px}
+.manifesto h2{font-size:clamp(26px,5vw,40px);letter-spacing:-.8px}
+.manifesto h2 em{font-style:normal;color:var(--sea)}
+.manifesto .sub{max-width:560px;margin:0 auto 34px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left}
+.pillar{background:var(--card);border:2px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:22px;padding:26px 24px;
+  box-shadow:inset 0 0 0 6px var(--card),inset 0 0 0 7px color-mix(in srgb,var(--gold) 30%,transparent)}
+.pillar .num{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;font-size:30px;line-height:1;color:var(--gold);margin-bottom:12px}
+.pillar h3{margin:0 0 8px;font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:21px;font-weight:700;line-height:1.35}
+.pillar p{margin:0;color:var(--muted);font-size:15.5px}
+@media (max-width:820px){.pillars{grid-template-columns:1fr}}
+.growth-tag{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;font-size:clamp(22px,3.4vw,28px);color:var(--sea);line-height:1.2;margin:0 0 2px}
 </style>
 </head>
 <body>
@@ -262,7 +277,7 @@ footer .orn{display:block;width:110px;height:14px;margin:0 auto 12px;background:
   <div class="wrap">
     <a class="brand" href="#"><img src="data:image/webp;base64,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" alt="" width="40" height="35">KATE ENGLISH</a>
     <nav class="nav" aria-label="메뉴">
-      <a href="#ways">수업 방식</a><a href="#curriculum">커리큘럼</a><a href="#system">수업 시스템</a><a href="#levels">레벨</a><a href="#faq">자주 묻는 질문</a>
+      <a href="#philosophy">철학</a><a href="#ways">수업 방식</a><a href="#curriculum">커리큘럼</a><a href="#system">성장 시스템</a><a href="#levels">레벨</a><a href="#faq">자주 묻는 질문</a>
     </nav>
     <a class="btn btn-sun" href="#" data-link="form">상담 신청</a>
   </div>
@@ -281,7 +296,17 @@ footer .orn{display:block;width:110px;height:14px;margin:0 auto 12px;background:
     <div class="hero-actions">
       <a class="btn btn-sun" href="#" data-link="form">무료 상담 신청하기</a>
       <a class="btn btn-talk" href="#" data-link="kakao">카톡으로 문의하기</a>
-      <a class="btn btn-line" href="#system">수업 시스템 보기</a>
+      <a class="btn btn-line" href="#system">성장 시스템 보기</a>
+    </div>
+  </section>
+
+  <section id="philosophy" class="manifesto">
+    <h2>영어는 ‘과목’이 아니라<br><em>‘언어’</em>입니다</h2>
+    <p class="sub">외우고 시험 보는 영어는 금방 잊혀요. Kate English는 몸이 기억하는 영어를 만듭니다.</p>
+    <div class="pillars">
+      <div class="pillar"><span class="num">i.</span><h3>Speaking으로 문법까지</h3><p>문법을 외운 다음에 말하는 게 아니라, 말하면서 문법을 익혀요. 내가 한 문장을 고쳐 가며 규칙이 자연스럽게 정리돼요.</p></div>
+      <div class="pillar"><span class="num">ii.</span><h3>‘몸’이 기억하는 언어</h3><p>쉐도잉과 롤플레이로 같은 표현을 입으로 여러 번 꺼내요. 머리로 떠올리기 전에 입이 먼저 반응하게 돼요.</p></div>
+      <div class="pillar"><span class="num">iii.</span><h3>영어를 체득하는 Kate English</h3><p>배워서 아는 영어가 아니라, 몸에 익어 쓰는 영어. 수업이 끝난 뒤에도 내 생활 속에서 계속 쓰이도록 함께해요.</p></div>
     </div>
   </section>
 
@@ -343,8 +368,8 @@ footer .orn{display:block;width:110px;height:14px;margin:0 auto 12px;background:
   </section>
 
   <section id="system">
-    <h2>처음 상담부터 실력이 늘 때까지</h2>
-    <p class="sub">수업 시작 전후로 이렇게 진행돼요.</p>
+    <h2><span class="growth-tag">Language Growth System</span>점수를 넘어 내 인생을 업그레이드하는<br>Kate English의 성장 시스템</h2>
+    <p class="sub">처음 상담부터 실력이 늘 때까지 이렇게 함께해요.</p>
     <ol class="flow">
       <li><div class="dot">1</div><div><h3>상담 신청서 작성</h3><p>영어가 필요한 이유, 원하는 수업 방식, 가능한 시간을 간단히 체크해 주세요. 3분이면 충분해요.</p></div></li>
       <li><div class="dot">2</div><div><h3>무료 레벨 진단</h3><p>짧은 대화로 지금 실력과 자주 막히는 부분을 함께 확인해요. 시험이 아니니 편하게 오시면 돼요.</p></div></li>
