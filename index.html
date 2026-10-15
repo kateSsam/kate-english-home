@@ -320,7 +320,7 @@ section.manifesto h2::before{content:"Our Philosophy";margin:0 auto 6px}
 
 .gram{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .gcard{background:var(--card);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);border-radius:20px;padding:22px 24px}
-.say{display:inline-block;margin:0 0 12px;padding:12px 18px;border-radius:20px 20px 20px 6px;background:#1F3A55;color:#FEF9F9;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;font-size:21px;line-height:1.3}
+.say{display:block;width:fit-content;max-width:100%;margin:0 0 12px;padding:12px 18px;border-radius:20px 20px 20px 6px;background:#1F3A55;color:#FEF9F9;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;font-size:21px;line-height:1.3}
 .rule{display:inline-block;margin:0 0 8px;font-size:14px;font-weight:700;padding:4px 12px;border-radius:999px;background:color-mix(in srgb,var(--sky) 70%,var(--card));color:var(--sea)}
 .gcard p:last-child{margin:0;color:var(--muted);font-size:15.5px;line-height:1.65}
 .gnote{margin:18px 0 0;text-align:center;font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-weight:600;font-size:17px}
@@ -404,6 +404,52 @@ main .lead,main .sub,.about p,.strengths p,.gcard p{max-width:36em}
 .where{display:inline-flex;align-items:center;gap:6px;margin:0 0 10px;font-size:14px;font-weight:700;color:var(--sea);
   padding:4px 12px 4px 10px;border-radius:999px;background:color-mix(in srgb,var(--sky) 60%,var(--card))}
 .where::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+
+/* records: level test, lesson report, recording */
+.records{border-top:1px solid var(--line);margin-top:10px;padding-top:6px}
+.rec-h{margin:12px 0 14px;font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-weight:700;font-size:17px}
+.rec-h small{font-family:"Noto Sans KR",sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);margin-left:6px;padding:2px 8px;border:1px solid var(--line);border-radius:999px}
+.rec-grid{display:grid;grid-template-columns:1fr 1.25fr 0.9fr;gap:14px;align-items:start}
+.rec{margin:0;display:flex;flex-direction:column;gap:10px}
+.rec figcaption b{display:block;font-size:15.5px}
+.rec figcaption span{display:block;font-size:13.5px;color:var(--muted);line-height:1.5}
+.mock{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px 14px 12px;font-size:13px}
+.mock-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;color:var(--muted)}
+.mock-top b{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;color:var(--sea)}
+.lvbars{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.lvbars li{display:grid;grid-template-columns:76px 1fr;align-items:center;gap:8px}
+.rl{font-size:12px;color:var(--muted);white-space:nowrap}
+.rb{display:grid;gap:3px}
+
+
+.legend{margin:10px 0 0;font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:5px}
+.legend span{display:inline-block;width:10px;height:6px;border-radius:3px;margin-left:6px}
+.legend .k-me{background:var(--gold);margin-left:0}.legend .k-avg{background:color-mix(in srgb,var(--muted) 35%,transparent)}
+.report{margin:0}
+.report dt{font-size:11.5px;font-weight:700;color:var(--sea);margin:8px 0 4px}
+.report dt:first-child{margin-top:0}
+.report dd{margin:0 0 6px;line-height:1.45}
+.report s{display:block;color:#B4574A;text-decoration-thickness:1px}
+.report em{display:block;font-style:normal;color:#3E7A4F;font-weight:500}
+:root[data-theme="dark"] .report s{color:#E08D80} :root[data-theme="dark"] .report em{color:#8CC79C}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .report s{color:#E08D80}:root:not([data-theme="light"]) .report em{color:#8CC79C}}
+.report .tags{display:flex;flex-wrap:wrap;gap:5px}
+.report .tags span{padding:2px 8px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:12px}
+.report .note{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:15px}
+.mock.video{position:relative;aspect-ratio:4/3;background:linear-gradient(160deg,#24405E,#1F3A55 60%,#162B40);border:0;display:grid;place-items:center;overflow:hidden}
+.play{width:52px;height:52px;border-radius:50%;background:rgba(254,249,249,.92);position:relative;box-shadow:0 0 0 6px rgba(217,184,142,.35)}
+.play::after{content:"";position:absolute;left:21px;top:16px;border-left:15px solid #1F3A55;border-top:10px solid transparent;border-bottom:10px solid transparent}
+.vbar{position:absolute;left:14px;right:14px;bottom:30px;height:4px;border-radius:2px;background:rgba(254,249,249,.25)}
+.vbar i{display:block;width:38%;height:100%;border-radius:2px;background:#D9B88E}
+.vmeta{position:absolute;left:14px;bottom:9px;font-size:12px;color:#E7E2DC}
+@media (max-width:900px){.rec-grid{grid-template-columns:1fr 1fr}.rec:last-child{grid-column:span 2}.mock.video{aspect-ratio:16/7}}
+@media (max-width:560px){.rec-grid{grid-template-columns:1fr}.rec:last-child{grid-column:auto}}
+
+.rb i{display:block;height:7px;border-radius:4px;background:linear-gradient(to right,var(--gold) var(--w),color-mix(in srgb,var(--line) 70%,transparent) var(--w))}
+.rb i.avg{background:linear-gradient(to right,color-mix(in srgb,var(--muted) 45%,transparent) var(--w),color-mix(in srgb,var(--line) 70%,transparent) var(--w))}
+.mock-top b small{font-size:15px;color:var(--muted);font-weight:500}
+
+.learner{margin:0 0 16px;padding:14px 18px;border-radius:14px;border:1px dashed color-mix(in srgb,var(--gold) 60%,transparent);color:var(--text)!important}
 </style>
 </head>
 <body>
@@ -490,11 +536,52 @@ main .lead,main .sub,.about p,.strengths p,.gcard p{max-width:36em}
           <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg></span><div><b>원어민과 1:1, 마주 보고</b><span>말하는 시간이 길고, 바로 교정</span></div></li>
           <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></span><div><b>전국 어디서나 휴대폰 하나로</b><span>앤보임 앱, 휴대폰·태블릿·노트북</span></div></li>
           <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M10 9.5v5l4-2.5z"/><path d="M8 21h8"/></svg></span><div><b>매 수업 피드백·녹화 영상</b><span>놓친 표현도 다시 보기</span></div></li>
-          <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><div><b>원하는 시간, 원하는 길이</b><span>평일 10시~22시, 20~50분, 연기 가능</span></div></li>
-          <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 21l4-2 4 2-1-7.5"/></svg></span><div><b>검증된 선생님</b><span>4주 교육·매달 평가, 변경도 가능</span></div></li>
-          <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/></svg></span><div><b>레벨 진단으로 시작</b><span>무료 체험 수업에서 실력 진단</span></div></li>
+          <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><div><b>원하는 시간, 원하는 길이</b><span>오전 6시~밤 11시 50분, 20~50분, 연기 가능</span></div></li>
+          <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 21l4-2 4 2-1-7.5"/></svg></span><div><b>검증된 선생님</b><span>4년제 대학 졸업·ESL 자격 이수</span></div></li>
+          <li><span class="pic sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/></svg></span><div><b>레벨 진단으로 시작</b><span>무료 레벨테스트, 영역별 결과표</span></div></li>
         </ul>
       </details>
+      <div class="records">
+        <h4 class="rec-h">수업하면 이런 기록이 남아요 <small>예시 화면</small></h4>
+        <div class="rec-grid">
+          <figure class="rec">
+            <figcaption><b>레벨테스트 결과표</b><span>무료 레벨테스트 후, 영역별 진단과 추천 과정을 받아요.</span></figcaption>
+            <div class="mock">
+              <div class="mock-top"><span>종합 평가</span><b>Level 7 <small>/ 8</small></b></div>
+              <ul class="lvbars">
+            <li><span class="rl">말하기·유창성</span><span class="rb"><i style="--w:87.5%"></i><i class="avg" style="--w:51.2%"></i></span></li>
+            <li><span class="rl">문법·정확도</span><span class="rb"><i style="--w:87.5%"></i><i class="avg" style="--w:43.8%"></i></span></li>
+            <li><span class="rl">듣기 이해도</span><span class="rb"><i style="--w:87.5%"></i><i class="avg" style="--w:55.0%"></i></span></li>
+            <li><span class="rl">발음</span><span class="rb"><i style="--w:87.5%"></i><i class="avg" style="--w:40.0%"></i></span></li>
+            <li><span class="rl">어휘력</span><span class="rb"><i style="--w:87.5%"></i><i class="avg" style="--w:50.0%"></i></span></li>
+              </ul>
+              <p class="legend"><span class="k-me"></span>내 점수 <span class="k-avg"></span>평균</p>
+            </div>
+          </figure>
+          <figure class="rec">
+            <figcaption><b>매 수업 결과표</b><span>선생님이 고쳐 준 문장, 발음, 한마디가 매번 남아요.</span></figcaption>
+            <div class="mock">
+              <dl class="report">
+                <dt>문장 교정</dt>
+                <dd><s>Yesterday voting day. I relaxed at home.</s><em>Yesterday was the election day, so I just relaxed at home.</em></dd>
+                <dd><s>Can I see me?</s><em>Can you see me?</em></dd>
+                <dt>발음 교정</dt>
+                <dd class="tags"><span>neighbors</span><span>the elevator</span><span>crowded</span></dd>
+                <dt>강사 한마디</dt>
+                <dd class="note">“Just study and review the sentences we had today.”</dd>
+              </dl>
+            </div>
+          </figure>
+          <figure class="rec">
+            <figcaption><b>수업 녹화 영상</b><span>지난 수업을 언제든 다시 보며 복습해요.</span></figcaption>
+            <div class="mock video">
+              <span class="play" aria-hidden="true"></span>
+              <span class="vbar"><i></i></span>
+              <span class="vmeta">지난 수업 다시 보기</span>
+            </div>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -515,6 +602,7 @@ main .lead,main .sub,.about p,.strengths p,.gcard p{max-width:36em}
           <div><h4>‘왜?’에 뉘앙스로 답해요</h4><p><span class="s"><span class="ph">“여기선 왜 the예요?”,</span> <span class="ph">“왜 현재완료로 말해요?” 같은 질문에 외울 규칙 대신 말하는 사람의 느낌,</span> <span class="ph">즉 뉘앙스로 설명해 드려요.</span></span><span class="s">이유를 알면 오래 남아요.</span></p></div>
         </div>
         <p><span class="s"><span class="ph">여러 영어 교육 방식을 현장에서 직접 겪어 봤기 때문에,</span> <span class="ph">각각이 무엇을 잘하고 무엇을 놓치는지 잘 알아요.</span></span><span class="s"><span class="ph">그래서 Kate English는 원어민 수업의 장점에,</span> <span class="ph">그 수업이 놓치기 쉬운 ‘내 것으로 만드는 시간’을 더했어요.</span></span></p>
+        <p class="learner"><span class="s">저도 지금 원어민 수업을 듣는 수강생이에요.</span><span class="s">레벨테스트도 직접 받아 봤어요.</span><span class="s"><span class="ph">그래서 이 수업이 무엇을 잘하고 어디서 막히는지,</span> <span class="ph">수강생의 자리에서 알아요.</span></span></p>
         <blockquote class="credo"><span class="s">학습에는 왕도가 없어요.</span><span class="s">공부는 정직하거든요.</span><span class="s"><span class="ph">사람이라 한계가 있고,</span> <span class="ph">사람이라 생각할 수 있어요.</span></span><span class="s"><span class="ph">저는 AI가 아니라,</span> <span class="ph">여러분 곁에서 같이 고민하는 사람이에요.</span></span><cite>Kate</cite></blockquote>
       </div>
     </div>
@@ -618,7 +706,7 @@ main .lead,main .sub,.about p,.strengths p,.gcard p{max-width:36em}
       <details><summary>대면 Class와 화상영어, 어떻게 골라요?</summary><p><span class="s"><span class="ph">모국어처럼 깊게 몸으로 익히고 싶다면 대면 Class,</span> <span class="ph">시간과 장소에 구애받지 않고 원어민과 자주 말하고 싶다면 화상영어가 잘 맞아요.</span></span><span class="s">상담 때 생활 패턴과 목표를 듣고 같이 골라 드려요.</span></p></details>
       <details><summary>대면 Class는 어디서, 누구와 하나요?</summary><p><span class="s"><span class="ph">의정부,</span> <span class="ph">양주,</span> <span class="ph">포천 지역에서 Kate 쌤과 1:1로 하는 것이 기본이에요.</span></span><span class="s">같은 목표를 가진 분들이 모이면 소그룹 Class도 열어요.</span><span class="s">장소와 일정은 상담 때 같이 정해요.</span></p></details>
       <details><summary>문법이 약한데 괜찮을까요?</summary><p><span class="s">오히려 잘 맞아요.</span><span class="s">Kate 쌤은 중학 영어 교과서 전권을 검토하며 문법이 회화로 어떻게 이어지는지 정리해 왔어요.</span><span class="s"><span class="ph">외우는 문법이 아니라,</span> <span class="ph">말할 때 바로 쓰는 문법으로 “왜”까지 설명해 드려요.</span></span></p></details>
-      <details><summary>원어민 선생님은 어떤 분들인가요?</summary><p><span class="s">앤보임의 필리핀 원어민 선생님들이에요.</span><span class="s">ESL 자격을 갖춘 선생님과 화면으로 마주 보고 1:1로 수업해요.</span></p></details>
+      <details><summary>원어민 선생님은 어떤 분들인가요?</summary><p><span class="s">앤보임의 필리핀 원어민 선생님들이에요.</span><span class="s">4년제 대학을 졸업하고 ESL 자격을 이수한 선생님만 수업해요.</span><span class="s">졸업증명서와 성적증명서로 확인을 거쳐요.</span></p></details>
       <details><summary>원어민 수업은 무엇으로 하나요?</summary><p><span class="s"><span class="ph">앤보임 앱으로 휴대폰,</span> <span class="ph">태블릿,</span> <span class="ph">노트북에서 들어요.</span></span><span class="s">처음 접속하는 방법도 안내해 드려요.</span></p></details>
       <details><summary>Kate 쌤 트레이닝은 어떻게 하나요?</summary><p><span class="s">화상영어는 Kate 쌤과 Zoom으로 30~40분 동안 Preview와 Review 트레이닝을 해요.</span><span class="s"><span class="ph">원어민 수업 주 2회를 기준으로 한 주에 한 과를 마칠 수 있게,</span> <span class="ph">6단계를 짧게 압축하고 긴 과정은 과제로 이어 가요.</span></span><span class="s">대면 Class는 한 번에 90분(쉬는 시간 포함 100분) 동안 6단계 전 과정을 함께해요.</span></p></details>
       <details><summary>수업료는 얼마인가요?</summary><p><span class="s"><span class="ph">대면 Class인지 화상영어인지,</span> <span class="ph">그리고 수업 횟수에 따라 달라져요.</span></span><span class="s">상담 신청서를 작성해 주시거나 카톡 오픈채팅으로 편하게 물어봐 주세요.</span></p></details>
